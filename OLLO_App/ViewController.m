@@ -24,4 +24,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Sign Button Action moving to sign in page
+- (IBAction)signin_Button_Click:(id)sender
+{
+    NSLog(@"Button Clicked");
+    //Signin_Page_ViewController *signinView = [[Signin_Page_ViewController alloc] init];
+    
+    // do any setup you need for myNewVC
+    
+    //[self presentViewController:signinView animated:YES completion:nil];
+}
+
+- (IBAction)locations_Button_Click:(id)sender {
+}
+- (IBAction)promotions_Button_Click:(id)sender {
+}
+
+- (IBAction)topup_Button_Click:(id)sender {
+}
+- (IBAction)support_Button_Click:(id)sender {
+}
+
+- (IBAction)website_Button_Click:(id)sender {
+}
 @end
