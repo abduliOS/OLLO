@@ -143,5 +143,17 @@ error: (NSError *) error
 }
 
 - (IBAction)signin_button:(id)sender {
+    
+    if ([userNameFiled.text isEqual:@"NRIC76543"] && [passwordFiled.text isEqual:@"123456"])
+    {
+        
+    }
+    else
+    {
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"OLLA"message:@"Invalid User name " delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [myAlertView show];
+    }
+    
+    
    }
 @end

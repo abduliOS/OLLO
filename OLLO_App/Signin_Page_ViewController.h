@@ -12,6 +12,8 @@
 @interface Signin_Page_ViewController : UIViewController <GPPSignInDelegate>
 {
     
+    IBOutlet UITextField *passwordFiled;
+    IBOutlet UITextField *userNameFiled;
     IBOutlet UIButton *signOut_button_G;
     IBOutlet UIImageView *signout_image;
     IBOutlet UIImageView *signin_image;

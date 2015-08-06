@@ -107,6 +107,7 @@
 		83A2B1571B6FD997004605A8 /* website@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2B13F1B6FD997004605A8 /* website@1x.png */; };
 		83A2B1581B6FD997004605A8 /* website@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2B1401B6FD997004605A8 /* website@2x.png */; };
 		83A2B1591B6FD997004605A8 /* website@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A2B1411B6FD997004605A8 /* website@3x.png */; };
+		83C739FF1B73831500D87712 /* AfterLogin_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C739FE1B73831500D87712 /* AfterLogin_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,8 @@
 		83A2B13F1B6FD997004605A8 /* website@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "website@1x.png"; sourceTree = "<group>"; };
 		83A2B1401B6FD997004605A8 /* website@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "website@2x.png"; sourceTree = "<group>"; };
 		83A2B1411B6FD997004605A8 /* website@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "website@3x.png"; sourceTree = "<group>"; };
+		83C739FD1B73831500D87712 /* AfterLogin_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfterLogin_ViewController.h; sourceTree = "<group>"; };
+		83C739FE1B73831500D87712 /* AfterLogin_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfterLogin_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				83A2B0FC1B6F96AC004605A8 /* ViewController.h */,
 				83A2B0FD1B6F96AC004605A8 /* ViewController.m */,
 				83A2B0FF1B6F96AC004605A8 /* Main.storyboard */,
+				83C739FD1B73831500D87712 /* AfterLogin_ViewController.h */,
+				83C739FE1B73831500D87712 /* AfterLogin_ViewController.m */,
 				836733A11B70E58100C3B053 /* Signin_Page_ViewController.h */,
 				836733A21B70E58100C3B053 /* Signin_Page_ViewController.m */,
 				83A2B1021B6F96AC004605A8 /* Images.xcassets */,
@@ -658,6 +663,7 @@
 			files = (
 				83A2B0FE1B6F96AC004605A8 /* ViewController.m in Sources */,
 				836733A31B70E58100C3B053 /* Signin_Page_ViewController.m in Sources */,
+				83C739FF1B73831500D87712 /* AfterLogin_ViewController.m in Sources */,
 				83A2B0FB1B6F96AC004605A8 /* AppDelegate.m in Sources */,
 				83A2B0F81B6F96AC004605A8 /* main.m in Sources */,
 			);
