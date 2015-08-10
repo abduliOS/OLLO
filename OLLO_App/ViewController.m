@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -46,5 +47,7 @@
 }
 
 - (IBAction)website_Button_Click:(id)sender {
+    NSString* launchUrl = @"http://zsolloapp.cloudapp.net/Default.aspx";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: launchUrl]];
 }
 @end

@@ -10,14 +10,24 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
+#import "AfterLogin_ViewController.h"
+#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 static NSString * const kClientId = @"439265397071-vio9ubaav7ia4hr6nsjehl4df8p22mpc.apps.googleusercontent.com";
 
-
+#define IS_IPHONE4 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 480.0f)
 @implementation Signin_Page_ViewController
 
 @synthesize signInButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    signOut_button_G.hidden = YES;
+    //AfterLogin_ViewController  *infoController = [self.storyboard instantiateViewControllerWithIdentifier:@"get_Started_View"];
+    //[self.navigationController pushViewController:infoController animated:YES];
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    //Keyboard stuff
+    _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    _tapRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:_tapRecognizer];
     GPPSignIn *signIn = [GPPSignIn sharedInstance];
     signIn.shouldFetchGooglePlusUser = YES;
     signIn.shouldFetchGoogleUserEmail = YES;  // Uncomment to get the user's email
@@ -146,14 +156,28 @@ error: (NSError *) error
     
     if ([userNameFiled.text isEqual:@"NRIC76543"] && [passwordFiled.text isEqual:@"123456"])
     {
-        
-    }
+        AfterLogin_ViewController  *infoController = [self.storyboard instantiateViewControllerWithIdentifier:@"get_Started_View"];
+        [self.navigationController pushViewController:infoController animated:YES];
+          }
     else
     {
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"OLLA"message:@"Invalid User name " delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"OLLA"message:@"Invalid User name or password " delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [myAlertView show];
     }
     
     
    }
+-(void)viewWillAppear:(BOOL)animated{
+    if (IS_IPHONE4)   //Check Whether is iPhone4s or not
+    {
+       // [ollo_img setFrame:CGRectMake(0, 0, 10, 10)]
+        NSLog(@"Iphone 3.5 inch");
+    }
+   
+}
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender
+{
+    [self.view endEditing:YES];
+}
+
 @end
